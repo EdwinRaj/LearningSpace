@@ -1,0 +1,10 @@
+C:\Edwin\Technical\SourceCode\LearningSpace\ReactiveExtensionFundamentals\LearnReactiveExtension\Chapter1\bin\Debug\Chapter1.pdb
+C:\Edwin\Technical\SourceCode\LearningSpace\ReactiveExtensionFundamentals\LearnReactiveExtension\Chapter1\obj\Debug\Chapter1.pdb
+C:\Edwin\Technical\SourceCode\LearningSpace\ReactiveExtensionFundamentals\LearnReactiveExtension\Chapter1\bin\Debug\Chapter1.exe
+C:\Edwin\Technical\SourceCode\LearningSpace\ReactiveExtensionFundamentals\LearnReactiveExtension\Chapter1\obj\Debug\Chapter1.csprojResolveAssemblyReference.cache
+C:\Edwin\Technical\SourceCode\LearningSpace\ReactiveExtensionFundamentals\LearnReactiveExtension\Chapter1\bin\Debug\System.Reactive.Core.xml
+C:\Edwin\Technical\SourceCode\LearningSpace\ReactiveExtensionFundamentals\LearnReactiveExtension\Chapter1\bin\Debug\System.Reactive.Interfaces.xml
+C:\Edwin\Technical\SourceCode\LearningSpace\ReactiveExtensionFundamentals\LearnReactiveExtension\Chapter1\bin\Debug\System.Reactive.Linq.xml
+C:\Edwin\Technical\SourceCode\LearningSpace\ReactiveExtensionFundamentals\LearnReactiveExtension\Chapter1\bin\Debug\System.Reactive.PlatformServices.xml
+C:\Edwin\Technical\SourceCode\LearningSpace\ReactiveExtensionFundamentals\LearnReactiveExtension\Chapter1\bin\Debug\Chapter1.dll
+C:\Edwin\Technical\SourceCode\LearningSpace\ReactiveExtensionFundamentals\LearnReactiveExtension\Chapter1\obj\Debug\Chapter1.dll

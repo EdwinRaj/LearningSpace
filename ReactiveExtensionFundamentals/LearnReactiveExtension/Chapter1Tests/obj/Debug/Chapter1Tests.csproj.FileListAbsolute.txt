@@ -1,0 +1,17 @@
+C:\Edwin\Technical\SourceCode\LearningSpace\ReactiveExtensionFundamentals\LearnReactiveExtension\Chapter1Tests\bin\Debug\Chapter1Tests.dll
+C:\Edwin\Technical\SourceCode\LearningSpace\ReactiveExtensionFundamentals\LearnReactiveExtension\Chapter1Tests\bin\Debug\Chapter1Tests.pdb
+C:\Edwin\Technical\SourceCode\LearningSpace\ReactiveExtensionFundamentals\LearnReactiveExtension\Chapter1Tests\bin\Debug\Chapter1.dll
+C:\Edwin\Technical\SourceCode\LearningSpace\ReactiveExtensionFundamentals\LearnReactiveExtension\Chapter1Tests\bin\Debug\nunit.framework.dll
+C:\Edwin\Technical\SourceCode\LearningSpace\ReactiveExtensionFundamentals\LearnReactiveExtension\Chapter1Tests\bin\Debug\System.Reactive.PlatformServices.dll
+C:\Edwin\Technical\SourceCode\LearningSpace\ReactiveExtensionFundamentals\LearnReactiveExtension\Chapter1Tests\bin\Debug\System.Reactive.Linq.dll
+C:\Edwin\Technical\SourceCode\LearningSpace\ReactiveExtensionFundamentals\LearnReactiveExtension\Chapter1Tests\bin\Debug\System.Reactive.Interfaces.dll
+C:\Edwin\Technical\SourceCode\LearningSpace\ReactiveExtensionFundamentals\LearnReactiveExtension\Chapter1Tests\bin\Debug\System.Reactive.Core.dll
+C:\Edwin\Technical\SourceCode\LearningSpace\ReactiveExtensionFundamentals\LearnReactiveExtension\Chapter1Tests\bin\Debug\Chapter1.pdb
+C:\Edwin\Technical\SourceCode\LearningSpace\ReactiveExtensionFundamentals\LearnReactiveExtension\Chapter1Tests\bin\Debug\nunit.framework.xml
+C:\Edwin\Technical\SourceCode\LearningSpace\ReactiveExtensionFundamentals\LearnReactiveExtension\Chapter1Tests\bin\Debug\System.Reactive.PlatformServices.xml
+C:\Edwin\Technical\SourceCode\LearningSpace\ReactiveExtensionFundamentals\LearnReactiveExtension\Chapter1Tests\bin\Debug\System.Reactive.Linq.xml
+C:\Edwin\Technical\SourceCode\LearningSpace\ReactiveExtensionFundamentals\LearnReactiveExtension\Chapter1Tests\bin\Debug\System.Reactive.Interfaces.xml
+C:\Edwin\Technical\SourceCode\LearningSpace\ReactiveExtensionFundamentals\LearnReactiveExtension\Chapter1Tests\bin\Debug\System.Reactive.Core.xml
+C:\Edwin\Technical\SourceCode\LearningSpace\ReactiveExtensionFundamentals\LearnReactiveExtension\Chapter1Tests\obj\Debug\Chapter1Tests.csprojResolveAssemblyReference.cache
+C:\Edwin\Technical\SourceCode\LearningSpace\ReactiveExtensionFundamentals\LearnReactiveExtension\Chapter1Tests\obj\Debug\Chapter1Tests.dll
+C:\Edwin\Technical\SourceCode\LearningSpace\ReactiveExtensionFundamentals\LearnReactiveExtension\Chapter1Tests\obj\Debug\Chapter1Tests.pdb
