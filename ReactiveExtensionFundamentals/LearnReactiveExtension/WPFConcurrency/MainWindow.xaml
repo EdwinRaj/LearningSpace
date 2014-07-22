@@ -3,6 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <StackPanel>
+            <Button Name="Start" Click="Start_Click">Start</Button>
+            <TextBox Name="Results" 
+                     Height="250" 
+                     VerticalScrollBarVisibility="Auto" 
+                     IsReadOnly ="True"/>
+        </StackPanel>
     </Grid>
 </Window>
