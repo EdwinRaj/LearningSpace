@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter2", "Chapter2\Chapte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter2Tests", "Chapter2Tests\Chapter2Tests.csproj", "{0FCB7F02-1BE6-4987-8C71-6EE35EF0B95A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleConcurrency", "SimpleConcurrency\SimpleConcurrency.csproj", "{D0880890-9EB0-43F1-981D-E8CE397AD106}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,10 @@ Global
 		{0FCB7F02-1BE6-4987-8C71-6EE35EF0B95A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FCB7F02-1BE6-4987-8C71-6EE35EF0B95A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FCB7F02-1BE6-4987-8C71-6EE35EF0B95A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0880890-9EB0-43F1-981D-E8CE397AD106}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0880890-9EB0-43F1-981D-E8CE397AD106}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0880890-9EB0-43F1-981D-E8CE397AD106}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0880890-9EB0-43F1-981D-E8CE397AD106}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Reactive.Linq;
 using System.Reactive.Linq.ObservableImpl;
@@ -14,7 +15,7 @@ namespace Chapter2Tests
     public class NumericObserverTests
     {
         [Test]
-        public void TestPrimitiveObserver()
+        public void TestPrimitiveObserverRunsToCompletion()
         {
             int[] array = {1, 2, 3, 4, 5};
             var myObservable = (array).ToObservable();
@@ -22,5 +23,86 @@ namespace Chapter2Tests
             myObservable.Subscribe(numericObserver);
 
         }
+
+
+        /// <summary>
+        /// Any error that happens on the observable gets caught on exception delegate block
+        /// </summary>
+        [Test]
+        public void TestPrimitiveObserverRunsToError()
+        {
+            int[] array = { 1, 2, 3, 0, 4, 5 };
+            var myObservable = array
+                                 //.Select(x=> 10 / x)//To Invoke on error, uncomment this line
+                                .ToObservable();
+            
+            //Below code follows grammer OnNext/OnError/OnComplete
+            //IMPORTANT: Any error that happens inside OnNext doesnt get propagated to OnError.
+            myObservable.Subscribe(
+                n =>
+                {
+                    Console.WriteLine(n);
+                }
+                , ex =>
+                {
+                    Exception localException = ex;
+                    Console.WriteLine(localException.ToString());
+                }
+                , () => Console.WriteLine("Completed Successfully")
+
+                );
+
+
+        }
+
+        /// <summary>
+        /// My own custom observable using Observerable.Create
+        /// </summary>
+        [Test]
+        public void CreatingMyOwnObserver()
+        {
+             var rates = new List<FxRates>()
+            {
+                new FxRates() {CurrencyPair = "USD/GBP", BidPrice = 2.01m, AskPrice = 2.00m},
+                new FxRates() {CurrencyPair = "USD/Eur", BidPrice = 1.3m, AskPrice = 1.31m},
+                new FxRates() {CurrencyPair = "GBP/Eur", BidPrice = .8m, AskPrice = .81m}
+            };
+
+            var observable = Observable.Create<FxRates>(observer =>
+            {
+                try
+                {
+                    foreach (var currencyPair in rates)
+                    {
+                        observer.OnNext(currencyPair);//On next called
+                    }
+                    observer.OnCompleted();////On Completed called
+                }
+                catch (Exception exception)
+                {
+                    observer.OnError(exception);//OnError called
+                }
+                return () => { };
+            });
+
+            observable.Subscribe(
+                (currencyPair) => Console.WriteLine(currencyPair.ToString()),
+                (ex) => Console.WriteLine(ex.ToString()),
+                () => Console.WriteLine("Iteration of FxRates Completed")
+                );
+        }
+
+        [Test]
+        public void MakingUseOfExistingObservableImplementation()
+        {
+            var fxRateObservable = new FxRateObservable();
+            fxRateObservable.Subscribe(
+                 (currencyPair) => Console.WriteLine(currencyPair.ToString()),
+                (ex) => Console.WriteLine(ex.ToString()),
+                () => Console.WriteLine("Iteration of FxRates Completed")
+                );
+        }
+
+
     }
 }
