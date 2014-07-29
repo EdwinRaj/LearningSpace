@@ -28,15 +28,19 @@ namespace Chapter1
 
         public void RxDemo()
         {
+            
             Console.WriteLine("Main Thread Id-{0}", Thread.CurrentThread.ManagedThreadId);
 
             var query = from number in Enumerable.Range(1, 5)
                         select number;
-            var observable = query.ToObservable(NewThreadScheduler.Default);
+            var observable = query.ToObservable(NewThreadScheduler.Default);//Here a sequence is converted into an observable sequence
             observable.Subscribe(PrintNumber, IamDone);
             Console.ReadLine();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void ExplicitObserverDemo()
         {
             var query = from number in Enumerable.Range(1, 5)
