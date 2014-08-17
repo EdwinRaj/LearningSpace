@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="Citi.CodeTest.Views.TickerControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" 
+               Name="LabelSymbol" 
+               Content="{Binding StockItem.Symbol}"></Label>
+        <Grid 
+                Name="GridBidAsk" 
+                Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <Button 
+                    Name="ButtonBuy"
+                    Command="{Binding }"
+                        ></Button>
+                <Viewbox Stretch="Uniform">
+                    <Label Name="LabelBidPrice" Content="{Binding StockItem.BidPrice}"></Label>
+                </Viewbox>
+                </StackPanel>
+            <StackPanel Grid.Column="1">
+                <Button 
+                    Name="ButtonSell"
+                    Command="{Binding }"
+                        ></Button>
+                <Viewbox Stretch="Uniform">
+                    <Label Name="LabelAskPrice" Content="{Binding StockItem.AskPrice}"></Label>
+                </Viewbox>
+            </StackPanel>
+        </Grid>
+              
+        
+    </Grid>
+</UserControl>
