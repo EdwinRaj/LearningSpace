@@ -25,7 +25,7 @@ namespace Citi.CodeTest.Views
         public LaunchView()
         {
             InitializeComponent();
-            this.RegisterWithContainer();
+           this.RegisterWithContainer();
         }
 
         /*

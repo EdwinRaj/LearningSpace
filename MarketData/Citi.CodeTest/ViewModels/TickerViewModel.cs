@@ -22,21 +22,14 @@ namespace Citi.CodeTest.ViewModels
     [Export(typeof(ITickerViewModel))]
     public class TickerViewModel:BaseViewModel, ITickerViewModel
     {
-        [Import]
+        //[Import]
         private IStockProviderService Service { get; set; }
 
-        public TickerViewModel()
+        [ImportingConstructor]
+        public TickerViewModel(IStockProviderService stockProviderService)
         {
-            //Compose();
+            this.Service = stockProviderService;
         }
-
-        private void Compose()
-        {
-            var compositionBatch = new CompositionBatch();
-            compositionBatch.AddPart(this);
-            CompositionHelper.Container.Compose(compositionBatch);
-        }
-
 
         private StockItemDto _stockItem;
 
@@ -46,17 +39,21 @@ namespace Citi.CodeTest.ViewModels
             set
             {
                 _stockItem = value;
-                OnPropertyChanged("StockItemDto");
+                OnPropertyChanged("StockItem");
             }
         }
 
         public void Initialise(string symbol)
         {
-            //StockItemDto dto = Service.GetTicks(symbol)
-            //    .SubscribeOn(SynchronizationContext.Current)
-            //    .First();
+            Service.GetTicks(symbol)
+                .SubscribeOn(SynchronizationContext.Current)
+                .Subscribe(OnNextItem);
 
-            //StockItem = dto;
+        }
+
+        private void OnNextItem(StockItemDto stockItemDto)
+        {
+            this.StockItem = stockItemDto;
         }
     }
 }

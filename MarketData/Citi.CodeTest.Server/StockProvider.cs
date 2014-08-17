@@ -7,7 +7,7 @@ using System.Reactive.Subjects;
 
 namespace Citi.CodeTest.Server
 {
-    [Export(typeof(StockProvider))]
+    [Export(typeof(IStockProvider))]
 	internal class StockProvider : IStockProvider
 	{
 		private static readonly List<string> SymbolNames = new List<string> {"MSFT", "IBM", "APPL"};

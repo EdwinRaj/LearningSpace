@@ -6,6 +6,7 @@ using System.Text;
 using System.Windows;
 using System.Windows.Documents;
 using System.Windows.Input;
+using Citi.CodeTest.ApplicationServices;
 using Citi.CodeTest.Common;
 
 namespace Citi.CodeTest.ViewModels
@@ -20,21 +21,24 @@ namespace Citi.CodeTest.ViewModels
     [Export(typeof(ILaunchViewModel))]
     public class LaunchViewModel:ILaunchViewModel
     {
+        private IStockProviderService _stockProviderService;
+
+        [ImportingConstructor]
+        public LaunchViewModel(IStockProviderService stockProviderService)
+        {
+            this._stockProviderService = stockProviderService;
+        }
+
         public IEnumerable<string> Symbols
         {
-            get
-            {
-                return new List<string>()
-                       {
-                           "MSFT",
-                           "Goog",
-                           "yahoo"
-                       };
-            }
+            get { return _stockProviderService.GetStockSymbols(); }
         }
 
 
         private ICommand _openTickerWindowCommand;
+
+        
+
         public ICommand OpenTickerWindow
         {
             get

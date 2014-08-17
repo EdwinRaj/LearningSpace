@@ -17,25 +17,19 @@ namespace Citi.CodeTest.ApplicationServices
     [Export(typeof(IStockProviderService))]
     public class StockProviderService:IStockProviderService
     {
-        //[Import] 
-        //private IStockProvider _stockProvider;
+        
+        private IStockProvider _stockProvider;
 
-        public StockProviderService()
+        [ImportingConstructor]
+        public StockProviderService(IStockProvider stockProvider)
         {
-            //Compose();
+            _stockProvider = stockProvider;
         }
 
-        private void Compose()
-        {
-            var compositionBatch = new CompositionBatch();
-            compositionBatch.AddPart(this);
-            CompositionHelper.Container.Compose(compositionBatch);
-        }
-
+       
         public IEnumerable<String> GetStockSymbols()
         {
-            //return _stockProvider.StockSymbols.ToList();
-            throw new NotImplementedException();
+            return _stockProvider.StockSymbols.ToList();
         }
 
         /// <summary>
@@ -45,16 +39,15 @@ namespace Citi.CodeTest.ApplicationServices
         /// <returns></returns>
         public IObservable<StockItemDto> GetTicks(string symbol)
         {
-            //return _stockProvider.Subscribe(symbol)
-            //    .ObserveOn(ThreadPoolScheduler.Instance)
-            //    .Select(x => new StockItemDto
-            //                 {
-            //                     AskPrice = x.Ask,
-            //                     BidPrice = x.Bid,
-            //                     DateTime = x.DateTime,
-            //                     Symbol = x.Name
-            //                 });
-            throw new NotImplementedException();
+            return _stockProvider.Subscribe(symbol)
+                .ObserveOn(ThreadPoolScheduler.Instance)
+                .Select(x => new StockItemDto
+                             {
+                                 AskPrice = x.Ask,
+                                 BidPrice = x.Bid,
+                                 DateTime = x.DateTime,
+                                 Symbol = x.Name
+                             });
         }
 
     }

@@ -25,7 +25,7 @@
                 <Button 
                     Name="ButtonBuy"
                     Command="{Binding }"
-                        ></Button>
+                        >Buy</Button>
                 <Viewbox Stretch="Uniform">
                     <Label Name="LabelBidPrice" Content="{Binding StockItem.BidPrice}"></Label>
                 </Viewbox>
@@ -34,7 +34,7 @@
                 <Button 
                     Name="ButtonSell"
                     Command="{Binding }"
-                        ></Button>
+                        >Sell</Button>
                 <Viewbox Stretch="Uniform">
                     <Label Name="LabelAskPrice" Content="{Binding StockItem.AskPrice}"></Label>
                 </Viewbox>

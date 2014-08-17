@@ -23,7 +23,10 @@ namespace Citi.CodeTest.Utilities
 
         public static void Compose()
         {
-            var catalog = new AssemblyCatalog(Assembly.GetExecutingAssembly());
+            var catalog = new AggregateCatalog();
+            catalog.Catalogs.Add(new DirectoryCatalog("."));
+            catalog.Catalogs.Add(new AssemblyCatalog(Assembly.GetExecutingAssembly()));
+
             _container = new CompositionContainer(catalog);
         }
 
