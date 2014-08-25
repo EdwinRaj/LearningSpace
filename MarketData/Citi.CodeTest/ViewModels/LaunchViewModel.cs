@@ -50,6 +50,7 @@ namespace Citi.CodeTest.ViewModels
         private void ApplyOwnTickerWindowCommand(string commandName)
         {
            var window = new TickerWindow();
+            window.Title = commandName;
             window.Initialise(commandName);
             window.Show();
         }

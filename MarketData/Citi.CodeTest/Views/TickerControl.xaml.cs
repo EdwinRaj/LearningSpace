@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Citi.CodeTest.ApplicationServices;
 using Citi.CodeTest.Utilities;
 using Citi.CodeTest.ViewModels;
 
@@ -20,10 +21,11 @@ namespace Citi.CodeTest.Views
     /// <summary>
     /// Interaction logic for TickerControl.xaml
     /// </summary>
+    //[Export(typeof(TickerControl))]
     public partial class TickerControl : UserControl
     {
 
-        [Import]
+        //[Import]
         public ITickerViewModel TickerViewModel
         {
             get { return this.DataContext as ITickerViewModel; }
@@ -33,7 +35,8 @@ namespace Citi.CodeTest.Views
         public TickerControl()
         {
             InitializeComponent();
-            this.RegisterWithContainer();
+            this.TickerViewModel = new TickerViewModel();
+            //this.RegisterWithContainer();
         }
 
 

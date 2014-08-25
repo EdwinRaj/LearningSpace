@@ -28,6 +28,7 @@ namespace Citi.CodeTest.Utilities
             catalog.Catalogs.Add(new AssemblyCatalog(Assembly.GetExecutingAssembly()));
 
             _container = new CompositionContainer(catalog);
+            _container.Compose(new CompositionBatch());
         }
 
     }

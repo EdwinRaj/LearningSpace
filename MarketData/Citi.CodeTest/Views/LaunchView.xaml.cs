@@ -28,19 +28,5 @@ namespace Citi.CodeTest.Views
            this.RegisterWithContainer();
         }
 
-        /*
-         public List<string> Symbols
-        {
-            get
-            {
-                return new List<string>()
-                       {
-                           "MSFT",
-                           "Goog",
-                           "yahoo"
-                       };
-            }
-        }
-            */
     }
 }

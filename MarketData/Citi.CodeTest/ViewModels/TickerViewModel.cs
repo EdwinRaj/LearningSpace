@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
 using System.Linq;
+using System.Reactive.Concurrency;
 using System.Reactive.Linq;
 using System.Text;
 using System.Threading;
@@ -22,15 +23,16 @@ namespace Citi.CodeTest.ViewModels
     [Export(typeof(ITickerViewModel))]
     public class TickerViewModel:BaseViewModel, ITickerViewModel
     {
-        //[Import]
+        [Import]
         private IStockProviderService Service { get; set; }
 
-        [ImportingConstructor]
-        public TickerViewModel(IStockProviderService stockProviderService)
-        {
-            this.Service = stockProviderService;
-        }
+        private string _symbol;
 
+        public TickerViewModel()
+        {
+            CompositionHelper.Container.ComposeParts(this);
+        }
+        
         private StockItemDto _stockItem;
 
         public StockItemDto StockItem
@@ -45,15 +47,18 @@ namespace Citi.CodeTest.ViewModels
 
         public void Initialise(string symbol)
         {
+            this._symbol = symbol;
+
             Service.GetTicks(symbol)
-                .SubscribeOn(SynchronizationContext.Current)
+                .SubscribeOn(ThreadPoolScheduler.Instance)
                 .Subscribe(OnNextItem);
 
         }
 
         private void OnNextItem(StockItemDto stockItemDto)
         {
-            this.StockItem = stockItemDto;
+            if (stockItemDto.Symbol == _symbol)
+                this.StockItem = stockItemDto;
         }
     }
 }

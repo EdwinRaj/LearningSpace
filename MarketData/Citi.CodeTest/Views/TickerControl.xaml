@@ -26,7 +26,7 @@
                     Name="ButtonBuy"
                     Command="{Binding }"
                         >Buy</Button>
-                <Viewbox Stretch="Uniform">
+                <Viewbox Stretch="Fill">
                     <Label Name="LabelBidPrice" Content="{Binding StockItem.BidPrice}"></Label>
                 </Viewbox>
                 </StackPanel>
@@ -35,8 +35,8 @@
                     Name="ButtonSell"
                     Command="{Binding }"
                         >Sell</Button>
-                <Viewbox Stretch="Uniform">
-                    <Label Name="LabelAskPrice" Content="{Binding StockItem.AskPrice}"></Label>
+                <Viewbox Stretch="Fill">
+                    <Label Name="LabelAskPrice" Content="{Binding StockItem.AskPrice}" ></Label>
                 </Viewbox>
             </StackPanel>
         </Grid>

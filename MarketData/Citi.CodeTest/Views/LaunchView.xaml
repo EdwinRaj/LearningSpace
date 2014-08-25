@@ -9,8 +9,7 @@
     <Grid>
         <ListView Name="StockSymbols"
                   ItemsSource="{Binding Symbols}" 
-                  BorderBrush="Red" 
-                  BorderThickness="4">
+                  >
             <ListView.View>
                 <GridView>
                     <GridViewColumn>

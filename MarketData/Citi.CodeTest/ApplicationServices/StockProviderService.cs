@@ -17,8 +17,7 @@ namespace Citi.CodeTest.ApplicationServices
     [Export(typeof(IStockProviderService))]
     public class StockProviderService:IStockProviderService
     {
-        
-        private IStockProvider _stockProvider;
+        private readonly IStockProvider _stockProvider;
 
         [ImportingConstructor]
         public StockProviderService(IStockProvider stockProvider)

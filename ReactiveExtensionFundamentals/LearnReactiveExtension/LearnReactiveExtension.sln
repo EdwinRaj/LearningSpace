@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter1", "Chapter1\Chapter1.csproj", "{6C0DB302-2BB6-4A8B-B3F4-0DF47CEFE2A6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter1Tests", "Chapter1Tests\Chapter1Tests.csproj", "{DD3D3699-6989-4C6E-B3C8-D2F78B656DA0}"
@@ -27,6 +29,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisposingFile", "DisposingFile\DisposingFile.csproj", "{F0A5E87F-5914-4A22-A683-6BD0A5AAB3E2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFObserveWithDispatcher", "WPFObserveWithDispatcher\WPFObserveWithDispatcher.csproj", "{543A44E3-CA89-47E9-8C7D-72EF86AF6DD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandBox", "SandBox\SandBox.csproj", "{03E8F2D2-5439-4B23-9101-F03AF98628C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -78,6 +82,10 @@ Global
 		{543A44E3-CA89-47E9-8C7D-72EF86AF6DD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{543A44E3-CA89-47E9-8C7D-72EF86AF6DD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{543A44E3-CA89-47E9-8C7D-72EF86AF6DD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03E8F2D2-5439-4B23-9101-F03AF98628C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03E8F2D2-5439-4B23-9101-F03AF98628C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03E8F2D2-5439-4B23-9101-F03AF98628C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03E8F2D2-5439-4B23-9101-F03AF98628C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
