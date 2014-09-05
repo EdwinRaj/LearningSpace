@@ -23,6 +23,10 @@ namespace IntrinsicTypeTests
             //Assert.AreEqual(0, result);
         }
 
+
+        /// <summary>
+        /// Exception occurs in this case as well
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof (DivideByZeroException))]
         public void DivideByZeroDecimal()
@@ -33,6 +37,10 @@ namespace IntrinsicTypeTests
             //Assert.AreEqual(0, result);
         }
 
+        /// <summary>
+        /// In this case, the result gets the value of Infinity
+        /// Important take away: Double and Single Never through exceptions because of mathematical calculations
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(DivideByZeroException))]
         public void DivideByZeroDouble()

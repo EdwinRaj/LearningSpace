@@ -10,36 +10,41 @@ namespace IntrinsicTypeTests
   [TestClass]
   public class Rounding
   {
-    [TestMethod]
-    public void RoundingContext()
-    {
-      var score = 4.5;
-      if (Math.Round(score) == 5)
+      [TestMethod]
+      public void RoundingContext()
       {
-        // You win!
+          var score = 4.5;
+          if (Math.Round(score) == 5)
+          {
+              // You win!
+          }
+          else
+          {
+              // You lose!!
+          }
       }
-      else
+
+      /// <summary>
+      /// Example for bankers or Mid point rounding
+      /// </summary>
+      [TestMethod]
+      //[ExpectedException(typeof(Exception))]
+      public void RoundingFrom5()
       {
-        // You lose!!
+          var x = Math.Round(3.5);
+          Assert.AreEqual(4, x);
+
+          var y = Math.Round(4.5);//.NET performs rounding to the nearest mid point even number. That's why instead of 5, it rounded to 4
+          Assert.AreEqual(4, y);
+
+          var z = Math.Round(5.5);
+          Assert.AreEqual(6, z);
+
+          var a = Math.Round(3.25, 1);//Similar case as above
+          Assert.AreEqual(3.2, a);
       }
-    }
 
-    [TestMethod]
-    //[ExpectedException(typeof(Exception))]
-    public void RoundingFrom5()
-    {
-      var x = Math.Round(3.5);
-      //Assert.AreEqual(3,y);
-      //Assert.AreEqual(4, x);
-      var y = Math.Round(4.5);
-      //Assert.AreEqual(4, y);
-      //Assert.AreEqual(5,y);
-      var z = Math.Round(3.25, 1);
-      //Assert.AreEqual(3.2, z);
-      //Assert.AreEqual( 3.3,z);
-    }
-
-    [TestMethod]
+      [TestMethod]
     public void RoundingFrom5WithMidpoint()
     {
       var x = Math.Round(3.5, MidpointRounding.AwayFromZero);
