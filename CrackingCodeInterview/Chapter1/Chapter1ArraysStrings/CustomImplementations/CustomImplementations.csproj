@@ -41,6 +41,8 @@
   <ItemGroup>
     <Compile Include="HashTableusingLinkedList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringReversal.cs" />
+    <Compile Include="StringSpaceReplace.cs" />
     <Compile Include="StringUnique.cs" />
     <Compile Include="Student.cs" />
   </ItemGroup>
