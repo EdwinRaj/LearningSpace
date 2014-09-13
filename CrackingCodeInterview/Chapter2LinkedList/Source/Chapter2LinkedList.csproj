@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D636515B-8A27-4EDF-9A1A-81099BAFAEBA}</ProjectGuid>
+    <ProjectGuid>{95421357-33EE-4A1B-AEA9-39281B0624FE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ImplementationTests</RootNamespace>
-    <AssemblyName>ImplementationTests</AssemblyName>
+    <RootNamespace>Chapter2LinkedList</RootNamespace>
+    <AssemblyName>Chapter2LinkedList</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,9 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,21 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomHashTableTests.cs" />
+    <Compile Include="SingleLinkedList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StringCompressionTest.cs" />
-    <Compile Include="StringReversalTest.cs" />
-    <Compile Include="StringSpaceReplaceTest.cs" />
-    <Compile Include="StringUniqueTests.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CustomImplementations\CustomImplementations.csproj">
-      <Project>{1c1dc6f9-c4ec-4381-b572-380819f5e0f8}</Project>
-      <Name>CustomImplementations</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
